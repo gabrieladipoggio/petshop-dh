@@ -3,6 +3,8 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+
 }
 
 :root{
@@ -10,8 +12,12 @@
     --text: #757575;
 }
 
+html{
+    width: 100vw;
+    max-width: 100%
+}
+
 body {
-    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
     color: #fff;
@@ -19,7 +25,6 @@ body {
 }
 
 header {
-    width: 100%;
     height: 110px;
     background: var(--main);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
@@ -30,12 +35,15 @@ header .container {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 header .container .links ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    flex-wrap: wrap;
+
 }
 
 header .container .links ul li {
@@ -56,36 +64,39 @@ header .container .links ul li a:hover {
  section .container {
     height: calc(100vh - 110px);
     display: flex;
+    flex-wrap: wrap;
+
 }
 
-section.texto-principal .container, 
-section.texto-secundario .container, 
-section.contato, section.login {
+.texto-principal .container, 
+.texto-secundario .container, 
+section.contato, .login {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 
-section.texto-principal h2 {
+.texto-principal h2 {
     width: 40%;
     text-transform: uppercase;
     font-size: 36px;   
     color: var(--text); 
 }
 
-section.servicos .container{
+section.servicos {
     background-color: #E5E5E5;
     color: var(--text);
     margin:0;
-    padding:0;
+    padding:0 0 5em;
     display: flex;
     flex-direction: column;
     vertical-align: middle;
+    flex-wrap: wrap;
 }
 
-section.servicos .container .servicos-titulo{
-    margin: 0 auto;
+.servicos-titulo{
+    text-align: center;
 }
 
 .servicos-titulo h3 {
@@ -96,11 +107,9 @@ section.servicos .container .servicos-titulo{
     margin: 60px 0;
 }
 
-section.servicos .container .servicos-cards{
+section.servicos .servicos-cards{
     display:flex;
-    flex-direction: row;
     justify-content:space-around;
-
 }
 
 .servicos-cards .cards-wrapper{
@@ -113,19 +122,20 @@ section.servicos .container .servicos-cards{
     background-color: #fff;
     width:266px;
     height:264px;
+    margin-bottom: 5px;
 }
 
 .servicos-cards .card-price{
     font-weight: 400;
 }
 
-section.texto-secundario .container {
+.texto-secundario .container {
     color: #757575;
     height: 100vh;
 
 }
 
-section.texto-secundario .container .texto-wrapper {
+.texto-secundario .container .texto-wrapper {
     width: 35%;
 }
 
@@ -218,17 +228,17 @@ button {
 
 
 /* Contato */ 
-section.contato, section.login{
+section.contato, .login{
     flex-direction: row;
     height: calc(100vh - 170px);
 }
 
-section.contato h2{
+.contato h2{
     margin-top:0;
     margin-bottom: 2rem;
 }
 
-article.contato-form {
+.contato-form {
     width:40%;
 }
 
@@ -236,6 +246,8 @@ form {
     display: flex;
     flex-direction: column;;
     width: 80%;
+    flex-wrap: wrap;
+
 }
 
 .contato form button {
@@ -269,7 +281,7 @@ footer.footer-contato {
 }
 
 /* Login */
-article.login-box{
+.login-box{
     width: 411px;
     height: 423px;
     box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
@@ -281,15 +293,16 @@ article.login-box{
     justify-content: center;
     align-items: center;
     height: 411px;
+    flex-wrap: wrap;
 
 }
 
-article.login-box h2 {
+.login-box h2 {
     text-align: center;
     margin: 0 0 25px 0;
 }
 
-section.login img {
+.login img {
     width: 27em;
 }
 
@@ -314,6 +327,8 @@ footer {
     background-color: var(--main);
 }
 footer .container, footer .footer-wrapper{
+    font-size: 18px;
+    max-height: 300px;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -321,6 +336,7 @@ footer .container, footer .footer-wrapper{
 
 footer .footer-wrapper {
     flex-direction: row;
+    flex-wrap: wrap;
     height: 300px;
     width: 45%;
 }
@@ -344,4 +360,88 @@ footer .footer-wrapper {
 
 .footer-wrapper a:hover{
     color:#757575
+}
+
+@media (max-width: 768px){
+    header {
+        height:170px;
+    }
+
+    header h1{
+        text-align: center;
+        display: block;
+    }
+
+    header h1 img {
+        margin-top: 10px;
+        height:80px;
+        width: auto;
+    }
+
+    header .container .links ul li{
+        margin: 0 10px 15px 10px;
+        padding: 0;
+        font-size: 24px;
+    }
+
+    section.texto-principal h2, .texto-secundario h2{
+        font-size: 24px;
+    }
+
+    header .container, .texto-principal .container, .servicos-wrapper, .servicos-cards, .texto-secundario .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .servicos-cards{
+        margin: 0 auto;
+    }
+
+    .cards-wrapper{
+        padding-bottom: 45px;
+    }
+
+    .cards-wrapper .card-img {
+        width: 450px;
+    }
+
+
+    .texto-principal .container{
+        margin: 2.5em 0;
+        height: 65vh;
+    }
+
+
+    .texto-principal .container h2{
+        width: 70%;
+        margin-top: 35px;
+        text-align: center;
+        order: 1;
+    }
+
+    .texto-principal .container img {
+        margin-bottom: 0;
+    }
+
+    .texto-secundario .container .texto-wrapper {
+        width: 85%;
+        font-size: 18px;
+    }
+
+    .texto-secundario .container {
+        justify-content: center;
+    }
+
+    img {
+        width: 60%;
+    }
+
+    footer .footer-wrapper{
+        font-size: 16px;
+    }
+
+    .logo-footer, iframe {
+        display: none;
+    }
 }
