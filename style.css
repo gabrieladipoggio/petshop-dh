@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main: #FFBE51;
+    --text: #757575;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 18px;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background: var(--main);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+header .container .links ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+header .container .links ul li {
+    margin-left: 50px;
+}
+
+header .container .links ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+header .container .links ul li a:hover {
+    text-decoration: underline;
+}
+/* HOME */
+ section .container {
+    height: calc(100vh - 110px);
+    display: flex;
+}
+
+section.texto-principal .container, 
+section.texto-secundario .container, 
+section.contato, section.login {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+section.texto-principal h2 {
+    width: 40%;
+    text-transform: uppercase;
+    font-size: 36px;   
+    color: var(--text); 
+}
+
+section.servicos .container{
+    background-color: #E5E5E5;
+    color: var(--text);
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+section.servicos .container .servicos-titulo{
+    margin: 0 auto;
+}
+
+.servicos-titulo h3 {
+    font-weight: 400;
+    color: #000;
+    font-size:40px;
+    text-transform: uppercase;
+    margin: 60px 0;
+}
+
+section.servicos .container .servicos-cards{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+}
+
+.servicos-cards .cards-wrapper{
+    display:flex;
+    flex-direction: column;
+    color: #000;   
+}
+
+.servicos-cards .card-img {
+    background-color: #fff;
+    width:266px;
+    height:264px;
+}
+
+.servicos-cards .card-price{
+    font-weight: 400;
+}
+
+section.texto-secundario .container {
+    color: #757575;
+    height: 100vh;
+
+}
+
+section.texto-secundario .container .texto-wrapper {
+    width: 35%;
+}
+
+.texto-wrapper h2{
+   font-weight: 700;
+   margin-bottom: 30px;
+}
+
+.texto-wrapper p {
+    font-weight: 400;
+}
+
+/* Serviços */
+h2{
+    color: var(--main);
+    text-transform: uppercase;
+    margin: 5rem 0;
+    font-size: 40px;
+}
+
+h2.servicos-titulo {
+    text-align: center;
+}
+
+article.servicos .container {
+    color: #000;
+    margin: 0 auto;
+}
+
+.servicos-wrapper {
+    display:flex;
+    justify-content: center;
+    margin: 7rem 0;
+}
+
+.servicos-wrapper .servicos-texto {
+    width:33%;
+    margin-left: 100px;
+}
+
+.price-title {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-title h3 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.price-title p {
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.servicos-texto .servicos-description{
+    color: var(--text);
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--main);
+    width: 245px;
+    height: 32px;
+    border: none;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;    
+}
+
+.servicos-wrapper .servicos-img {
+    width: 266px;
+    height: 264px;
+    background: #B1B1B1;
+}
+
+.servicos hr {
+    width: 1134px;
+    height: 5px;
+    margin: 0 auto;
+    background: #C4C4C4; 
+    border: none
+}
+
+
+/* Contato */ 
+section.contato, section.login{
+    flex-direction: row;
+    height: calc(100vh - 170px);
+}
+
+section.contato h2{
+    margin-top:0;
+    margin-bottom: 2rem;
+}
+
+article.contato-form {
+    width:40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;;
+    width: 80%;
+}
+
+.contato form button {
+    width: 100%;
+}
+
+form input {
+    margin-bottom: 10px;
+    height: 24px;
+    padding: 3px 4px;
+}
+
+form textarea {
+    font-family: 'Nunito', sans-serif;
+}
+
+.contato-mapa{
+    font-size: 16px;
+}
+
+footer.footer-contato {
+    background: #C4C4C4;
+    height: 60px;
+}
+
+.footer-contato p {
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+/* Login */
+article.login-box{
+    width: 411px;
+    height: 423px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
+}
+
+.login-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 411px;
+
+}
+
+article.login-box h2 {
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+section.login img {
+    width: 27em;
+}
+
+.login-box form{
+    width: 60%
+}
+
+.login-box .cadastro {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cadastro a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    height:300px;
+    background-color: var(--main);
+}
+footer .container, footer .footer-wrapper{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .footer-wrapper {
+    flex-direction: row;
+    height: 300px;
+    width: 45%;
+}
+
+
+.logo-footer {
+    background-image: url('./img/logo-footer.png');
+    background-repeat: no-repeat;
+    height:240px;
+    width:240px;
+}
+
+.footer-wrapper a, .footer-wrapper address{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.footer-wrapper a:hover{
+    color:#757575
+}
