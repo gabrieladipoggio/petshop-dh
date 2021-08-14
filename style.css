@@ -514,6 +514,10 @@ footer .footer-wrapper {
         display: none;
     }
 
+    section.login{
+        height: 100vh;
+    }
+
     .login-box{
         box-shadow: none;
     }
