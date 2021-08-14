@@ -514,12 +514,17 @@ footer .footer-wrapper {
         display: none;
     }
 
-    section.login{
-        height: 100vh;
-    }
-
     .login-box{
         box-shadow: none;
+    }
+
+    .login-wrapper{
+        height: 100%;
+        width: inherit;
+    }
+
+    section.login {
+        height: 100%;
     }
 
     img {
@@ -532,5 +537,10 @@ footer .footer-wrapper {
 
     .logo-footer, iframe {
         display: none;
+    }
+
+    .footer-contato{
+        position: absolute; 
+        left: 0 ; right: 0; 
     }
 }
