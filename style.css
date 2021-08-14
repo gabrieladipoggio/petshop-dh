@@ -362,33 +362,35 @@ footer .footer-wrapper {
     color:#757575
 }
 
-@media (max-width: 768px){
+@media (max-width: 640px){
+    
     header {
-        height:170px;
+        height:150px;
     }
 
-    header h1{
-        text-align: center;
-        display: block;
-    }
 
     header h1 img {
-        margin-top: 10px;
-        height:80px;
+        height: 80px;
         width: auto;
     }
 
+    header .container .links ul {
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+
     header .container .links ul li{
-        margin: 0 10px 15px 10px;
         padding: 0;
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    section.texto-principal h2, .texto-secundario h2, .servicos-texto h3, .servicos-texto .price{
         font-size: 24px;
     }
 
-    section.texto-principal h2, .texto-secundario h2{
-        font-size: 24px;
-    }
-
-    header .container, .texto-principal .container, .servicos-wrapper, .servicos-cards, .texto-secundario .container {
+    header .container, .texto-principal .container, .servicos-wrapper, .servicos-cards, .texto-secundario .container, .price-title{
         flex-direction: column;
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -403,19 +405,19 @@ footer .footer-wrapper {
     }
 
     .cards-wrapper .card-img {
-        width: 450px;
+        width: 300px;
     }
 
 
     .texto-principal .container{
         margin: 2.5em 0;
-        height: 65vh;
+        height: 60vh;
     }
 
 
     .texto-principal .container h2{
-        width: 70%;
-        margin-top: 35px;
+        width:90%;
+        margin: 30px 10px 0 10px;
         text-align: center;
         order: 1;
     }
@@ -424,14 +426,51 @@ footer .footer-wrapper {
         margin-bottom: 0;
     }
 
+    .servicos-titulo h2 {
+        margin: 0;
+        padding: 0;
+    }
+
     .texto-secundario .container .texto-wrapper {
         width: 85%;
         font-size: 18px;
     }
 
-    .texto-secundario .container {
-        justify-content: center;
+    .servicos-description, .servicos-wrapper .servicos-texto, .img-wrapper{
+        margin: 0 auto;
     }
+
+    .servicos-wrapper .servicos-texto, .img-wrapper{
+        width: 85%;
+    }
+
+    .servicos-titulo{
+        margin-top: 55px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .servicos-wrapper {
+        margin: 3em auto;
+    }
+
+    button{
+        width: 100%;
+        margin: 25px auto 0;
+    }
+
+    .servicos-description {
+        font-size: 18px;
+    }
+
+    .price-title {
+        align-items: flex-start;
+    }
+
+    .servicos hr {
+        width: 150px;
+    }
+
 
     img {
         width: 60%;
