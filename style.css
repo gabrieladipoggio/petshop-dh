@@ -88,7 +88,7 @@ section.servicos {
     background-color: #E5E5E5;
     color: var(--text);
     margin:0;
-    padding:0 0 5em;
+    padding:0 0 3em;
     display: flex;
     flex-direction: column;
     vertical-align: middle;
@@ -132,16 +132,19 @@ section.servicos .servicos-cards{
 .texto-secundario .container {
     color: #757575;
     height: 100vh;
+    margin-top: 80px;
 
 }
 
 .texto-secundario .container .texto-wrapper {
+    margin-top: 0;
     width: 35%;
 }
 
 .texto-wrapper h2{
    font-weight: 700;
-   margin-bottom: 30px;
+   margin-bottom: 5px;
+   margin-top: 50px;
 }
 
 .texto-wrapper p {
@@ -158,6 +161,7 @@ h2{
 
 h2.servicos-titulo {
     text-align: center;
+    margin-top: 55px;
 }
 
 article.servicos .container {
@@ -363,6 +367,11 @@ footer .footer-wrapper {
 }
 
 @media (max-width: 640px){
+     html {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     
     header {
         height:150px;
@@ -410,7 +419,7 @@ footer .footer-wrapper {
 
 
     .texto-principal .container{
-        margin: 2.5em 0;
+        margin: 2.5em 0 30px 0;
         height: 60vh;
     }
 
@@ -434,7 +443,7 @@ footer .footer-wrapper {
     .texto-secundario .container .texto-wrapper {
         width: 85%;
         font-size: 18px;
-    }
+        }
 
     .servicos-description, .servicos-wrapper .servicos-texto, .img-wrapper{
         margin: 0 auto;
@@ -445,8 +454,7 @@ footer .footer-wrapper {
     }
 
     .servicos-titulo{
-        margin-top: 55px;
-        margin-bottom: 0;
+        margin: 0;
         padding: 0;
     }
 
@@ -518,13 +526,8 @@ footer .footer-wrapper {
         box-shadow: none;
     }
 
-    .login-wrapper{
-        height: 100%;
-        width: inherit;
-    }
-
-    section.login {
-        height: 100%;
+    .login-wrapper, .login-box{
+        min-height: calc(100vh - 210px);
     }
 
     img {
@@ -535,12 +538,15 @@ footer .footer-wrapper {
         font-size: 16px;
     }
 
+    footer.footer-contato {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+    }
+    
     .logo-footer, iframe {
         display: none;
-    }
-
-    .footer-contato{
-        position: absolute; 
-        left: 0 ; right: 0; 
     }
 }
