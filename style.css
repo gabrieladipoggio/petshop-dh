@@ -471,6 +471,52 @@ footer .footer-wrapper {
         width: 150px;
     }
 
+    section.contato, .login {
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .contato-titulo{
+        text-align: center;
+    }
+
+    .contato h2{
+        margin-top: 55px;
+    }
+
+
+    .contato-mapa, .contato-form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contato-mapa iframe{
+        display: block;
+        height: 200px;
+        width: auto;
+        margin: 10px auto;
+    }
+
+    .contato-form form {
+        margin: 0 auto;
+    }
+
+    .contato-mapa{
+        width: 80%;
+        margin: 30px 0;
+        text-align: center;
+
+    }
+
+    .ilustra-login, .ilustra-cadastro {
+        display: none;
+    }
+
+    .login-box{
+        box-shadow: none;
+    }
 
     img {
         width: 60%;
