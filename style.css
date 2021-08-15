@@ -125,6 +125,11 @@ section.servicos .servicos-cards{
     margin-bottom: 5px;
 }
 
+.img-vet, .img-banho, .img-tosa {
+    width:266px;
+    height:264px;
+}   
+
 .servicos-cards .card-price{
     font-weight: 400;
 }
@@ -368,9 +373,9 @@ footer .footer-wrapper {
 
 @media (max-width: 640px){
      html {
-        min-height: 100%;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
     }
     
     header {
@@ -413,14 +418,14 @@ footer .footer-wrapper {
         padding-bottom: 45px;
     }
 
-    .cards-wrapper .card-img {
-        width: 300px;
-    }
+    .cards-wrapper .card-img, .img-vet, .img-banho, .img-tosa {
+        width:300px;
+    }       
 
 
-    .texto-principal .container{
-        margin: 2.5em 0 30px 0;
-        height: 60vh;
+    .texto-principal .container, .texto-secundario .container{
+        margin: 2.5em 0 3em 0;
+        height: 100%;
     }
 
 
@@ -440,10 +445,11 @@ footer .footer-wrapper {
         padding: 0;
     }
 
+
     .texto-secundario .container .texto-wrapper {
         width: 85%;
         font-size: 18px;
-        }
+    }
 
     .servicos-description, .servicos-wrapper .servicos-texto, .img-wrapper{
         margin: 0 auto;
@@ -539,9 +545,7 @@ footer .footer-wrapper {
     }
 
     footer.footer-contato {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        
         width: 100%;
 
     }
